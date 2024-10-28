@@ -12,6 +12,14 @@ This repository was created during my time in the [CBClab](https://www.cbclab.or
     [we use this only for visualization]
 - (Perhaps most importantly, ) We use [zarr](https://zarr.readthedocs.io/en/stable/), [dask](https://www.dask.org/), and [dask-image](https://image.dask.org/en/latest/) to parallelize many of these steps, and execute them out-of-core (on image-data that is larger than system memory). For this purpose, this repository implements a few wrappers to enable chunked processing (e.g. regionprops (see `core.apply_chunked_regionprops` which computes area and bbox in chuked arra), which also enables connected-component filtering (e.g. see `core.accept_labels`))
 
+## Example output
+
+<img src="images/v1_depthplot_density.png" alt="drawing" width="150"/>
+
+<img src="images/v1_table.png" alt="drawing" width="560"/>
+
+
+
 ## Limitations
 This repository was created for a specific project but is slowly(!) being extended to be of more general use. Also: This repository is only a pipeline, useful in the context of many other great tools (in case of our [angioMASH preprint](https://www.researchgate.netd/publication/383502948_Investigating_microscopic_angioarchitecture_in_the_human_visual_cortex_in_3D_with_angioMASH_tissue_clearing_and_labelling): [BigSticher](https://imagej.net/plugins/bigstitcher/), [StarDist](https://github.com/stardist/stardist), [LayNii](https://github.com/layerfMRI/LAYNII), [localthickness](https://pypi.org/project/localthickness/), [ITKSnap](http://www.itksnap.org/pmwiki/pmwiki.php), [Napari](https://napari.org/stable/), [ParaView](https://www.paraview.org/))
 
